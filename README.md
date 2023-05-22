@@ -1,6 +1,6 @@
-* Flashcard App
+## Flashcard App
 
-+ A Thinkful Capstone Project
+## A Thinkful Capstone Project
 
 This application saves and displays flashcard decks to the user. 
 
