@@ -1,0 +1,52 @@
+{
+  "decks": [
+    {
+      "name": "React Router",
+      "description": "React Router is a collection of navigational components that compose declaratively with your application.",
+      "id": 2
+    },
+    {
+      "name": "Caleb's First Deck",
+      "description": "This is Caleb's First Test Deck, I hope that this maps properly!",
+      "id": 3
+    }
+  ],
+  "cards": [
+    {
+      "front": "What does <Switch> do?",
+      "back": "Renders the first matching child <Route> ",
+      "deckId": 2,
+      "id": 5
+    },
+    {
+      "front": "sdf",
+      "back": "sdfasdf",
+      "deckId": 2,
+      "id": 6
+    },
+    {
+      "front": "sdf",
+      "back": "sdf",
+      "deckId": 2,
+      "id": 7
+    },
+    {
+      "front": "What is Caleb's middle name?",
+      "back": "Daniel",
+      "deckId": 3,
+      "id": 8
+    },
+    {
+      "front": "What is Caleb's wife's name?",
+      "back": "Jennifer",
+      "deckId": 3,
+      "id": 9
+    },
+    {
+      "front": "Who is Caleb's father?",
+      "back": "Joshua Freed",
+      "deckId": 3,
+      "id": 10
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+.btn-margin {
+    margin: 5px
+}
+
+.card-width {
+    margin : 10px;
+    min-width: 18rem;
+    width: 30rem;
+}
+
+.delete-btn {
+    float: right;
+}
+
+.card-count{
+    float: right;
+    font-size: 13px;
+}
+
