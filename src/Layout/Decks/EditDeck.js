@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { Link, useHistory, useParams, useRouteMatch } from "react-router-dom";
+import { Link, useHistory, useParams } from "react-router-dom";
 import { updateDeck, readDeck } from "../../utils/api";
 import DeckForms from "./DeckForms";
 
 function EditDeck() {
-  const { deckId } = useParams(); 
+  const { deckId } = useParams();
   const history = useHistory()
-  
+
   const initialFormState = {
     name: "",
     description: "",
   };
   const [formData, setFormData] = useState({ ...initialFormState });
   const [currentDeck, setCurrentDeck] = useState({});
-
 
   useEffect(() => {
     const abortController = new AbortController();
@@ -32,9 +31,9 @@ function EditDeck() {
     loadDeck();
 
     return () => {
-      abortController.abort(); 
+      abortController.abort();
     };
-  }, []);
+  }, [deckId]);
 
   const handleChange = ({ target }) => {
     setFormData({

@@ -27,9 +27,9 @@ function StudyDeck() {
 
     loadDeck();
     return () => {
-      abortController.abort(); 
+      abortController.abort();
     };
-  }, []);
+  }, [deckId]);
 
 
   const flipCard = (id) => {
@@ -93,7 +93,7 @@ function StudyDeck() {
               {currentDeck.cards.length} cards in this deck.
             </p>
             <Link to={`${deckUrl}/cards/new`} className="btn btn-primary">
-             Add Cards
+              Add Cards
             </Link>
           </div>
         );

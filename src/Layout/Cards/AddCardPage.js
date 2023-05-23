@@ -32,7 +32,7 @@ function AddCardPage() {
     return () => {
       abortController.abort(); 
     };
-  }, []);
+  }, [deckId]);
 
   const handleChange = ({ target }) => {
     setFormData({

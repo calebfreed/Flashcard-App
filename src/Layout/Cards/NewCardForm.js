@@ -21,7 +21,6 @@ function NewCardForm({ handleSubmit, handleImDone, handleChange, formData, handl
             </div>
             <div className="form-group">
                 <label htmlFor="back">Back</label>
-
                 <textarea
                     className="form-control"
                     id="back"
@@ -30,21 +29,13 @@ function NewCardForm({ handleSubmit, handleImDone, handleChange, formData, handl
                     value={formData.back}
                     placeholder="Back of card"
                 />
-                <br />
             </div>
 
-            <button
-                className="btn btn-margin btn-secondary"
-                onClick={handleCancel}
-            >
+            <button className="btn btn-margin btn-secondary" onClick={handleCancel}>
                 Cancel
             </button>
 
-            <button
-                className="btn btn-margin btn-primary"
-                type="submit"
-
-            >
+            <button className="btn btn-margin btn-primary" type="submit">
                 Submit
             </button>
 

@@ -1,6 +1,6 @@
 import React from "react"
 
-function DeckForms({handleSubmit, handleChange, formData, handleCancel}) {
+function DeckForms({ handleSubmit, handleChange, formData, handleCancel }) {
     return (
         <>
             <div className="form-group container">
@@ -46,8 +46,8 @@ function DeckForms({handleSubmit, handleChange, formData, handleCancel}) {
                 Cancel
             </button>
 
-            <button 
-                className="btn btn-margin btn-primary mr-1" 
+            <button
+                className="btn btn-margin btn-primary mr-1"
                 type="submit"
                 onClick={handleSubmit}>
                 Submit

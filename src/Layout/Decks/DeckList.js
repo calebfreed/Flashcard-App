@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useHistory } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 import { listDecks, deleteDeck } from "../../utils/api";
 
@@ -7,7 +7,6 @@ import { listDecks, deleteDeck } from "../../utils/api";
 function DeckList() {
 
     const [decks, setDecks] = useState([]);
-    const history = useHistory()
 
     useEffect(() => {
         const abortController = new AbortController();

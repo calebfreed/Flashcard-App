@@ -11,6 +11,7 @@ function EditCard() {
   const history = useHistory();
 
   const initialFormState = {
+    id: -1,
     front: "",
     back: "",
   };
@@ -24,7 +25,6 @@ function EditCard() {
       try {
         const deck = await readDeck(deckId, abortController.signal);
         setCurrentDeck(deck);
-
         console.log("Loaded deck", deck);
       } catch (error) {
         if (error.name === "AbortError")
@@ -36,10 +36,9 @@ function EditCard() {
     loadDeck();
 
     return () => {
-      console.log("Cleaned up");
       abortController.abort();
     };
-  }, []);
+  }, [deckId]);
 
   useEffect(() => {
     const abortController = new AbortController();
@@ -59,7 +58,14 @@ function EditCard() {
     return () => {
       abortController.abort();
     };
-  }, []);
+  }, [cardId]);
+
+  const handleChange = ({ target }) => {
+    setFormData({
+      ...formData,
+      [target.name]: target.value,
+    });
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -69,13 +75,6 @@ function EditCard() {
       history.push(`/decks/${deckId}`);
     }
     create();
-  };
-
-  const handleChange = ({ event }) => {
-    setFormData({
-      ...formData,
-      [event.name]: event.value,
-    });
   };
 
   const handleCancel = () => {

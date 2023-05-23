@@ -6,7 +6,6 @@ import Deck from "./Deck";
 import StudyDeck from "./StudyDeck";
 import NotFound from "../NotFound";
 import EditCard from "../Cards/EditCard";
-import CreateDeck from "./CreateDeck";
 
 function Deckrector() {
     const { path } = useRouteMatch();

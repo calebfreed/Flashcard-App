@@ -29,7 +29,7 @@ function Deck() {
         return () => {
             abortController.abort();
         };
-    }, []);
+    }, [deckId]);
 
     const deleteHandler = (id) => {
         if (
@@ -110,7 +110,7 @@ function Deck() {
                 <div className="col">
                     <p className="breadcrumb">
                         <Link to="/">
-                        Home
+                            Home
                         </Link>
                         &nbsp;/ {currentDeck.name}
                     </p>
@@ -145,8 +145,12 @@ function Deck() {
                 <div className="col">
                     <hr />
                     <h3>Cards</h3>
-                    <div className="card-width">
-                            <ul>{currentDeck.cards && renderCardList()}</ul>
+                    <div className="card ">
+                        <div className="card-body">
+                            <div className="card-width">
+                                <ul>{currentDeck.cards && renderCardList()}</ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
